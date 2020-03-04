@@ -17,7 +17,8 @@ function getWeath() {
             document.getElementById('currK').innerHTML = Math.floor(data.main.temp) + ' K'
             document.getElementById('currC').innerHTML = Math.floor(data.main.temp-273.15) + ' C'
             document.getElementById('currF').innerHTML = Math.floor(((data.main.temp-273.15) * (9 / 5) + 32)) + ' F'
-            document.getElementById('currCond').innerHTML = data.weather[0].main
+            document.getElementById('currCond').innerHTML = data.weather[0].main + '<br>'
+            document.getElementById('currCondPic').setAttribute('src', 'http://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png')
         })
 }
 
