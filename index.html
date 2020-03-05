@@ -16,27 +16,10 @@
 <body>
     <div class="row">
         <div class="col-lg-4"></div>
-        <div class="col-lg-4 col-sm-12 border">
+        <div class="col-lg-4 col-sm-12 border bg-info">
             <header class="bg-primary text-center text-warning">
                 <h1>Weather</h1>
             </header>
-            <nav>
-                <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link active px-4" id="nav-simple-tab" data-toggle="tab" href="#nav-simple"
-                        role="tab" aria-controls="nav-simple" aria-selected="true">
-                        <h2>Simple</h2>
-                    </a>
-                    <a class="nav-item nav-link px-4" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
-                        role="tab" aria-controls="nav-profile" aria-selected="false">
-                        <h2>Detailed</h2>
-                    </a>
-                </div>
-            </nav>
-            <div class="tab-content mx-3 mt-2" id="nav-tabContent">
-
-                <!--Simple Section-->
-                <div class="tab-pane fade show active " id="nav-simple" role="tabpanel" aria-labelledby="nav-home-tab">
-
                     <div class="row mb-3 border-bottom">
                         <div class="col-8">
                             <div class="form-group mx-sm-3 mb-2">
@@ -60,7 +43,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="text-center" scope="row" id="currCity">Test</td>
+                                        <td class="text-center text-light" scope="row" id="currCity"></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -76,10 +59,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="text-center">
-                                    <td scope="row" id="currK">Test</td>
-                                    <td id="currC">Test</td>
-                                    <td id="currF">Test</td>
+                                <tr class="text-center text-light">
+                                    <td scope="row" id="currK"></td>
+                                    <td id="currC"></td>
+                                    <td id="currF"></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -93,52 +76,55 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="text-center">
-                                    <td scope="row" id='currCond'>Test</td>
+                                <tr class="text-center text-light">
+                                    <td scope="row" id='currCond'></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                        <img src="#" id="currCondPic">
+                                        <div class="col-3"></div>
+                                        <div class="col-6">
+                                            <img src="#" id="currCondPic">
+                                        </div>
+                                        <div class="col-3"></div>
                                     </th>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-
-                </div>
-
-                <!--Detailed Section-->
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                     <div class="row">
-                        <div class="col-8">
-                            <div class="form-group mx-sm-3 mb-2">
-                                <label for="text" class="sr-only">Enter Zip Code</label>
-                                <input type="text" class="form-control" id="inputZipCode"
-                                    placeholder="Enter Zip Code">
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <button onclick="getWeathDet();" class="btn btn-primary mb-2" >Submit</button>
-                        </div>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr class="text-center bg-primary text-warning">
+                                    <th>Humidity</th>
+                                    <th>Pressure</th>
+                                    <th>Wind Speed</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="text-center text-light">
+                                    <td class="text-center text-light" scope="row" id="humid"></td>
+                                    <td id="pressure"></td>
+                                    <td id="windSpeed"></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="row"></div>
-                </div>
             </div>
         </div>
         <div class="col-lg-4"></div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
