@@ -20,7 +20,9 @@ function getWeath() {
                 document.getElementById('pressure').innerHTML = data.main.pressure + " mbar"
                 document.getElementById('windSpeed').innerHTML = data.wind.speed + ' MPH' 
             } else {
-                alert(data.message)
+                document.getElementById("alert").style.display = 'block'
+                document.getElementById("alertMes").innerHTML = data.message
+
             }
         }
     )
