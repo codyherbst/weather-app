@@ -10,18 +10,19 @@ function getWeath() {
             // console.log(data);
 
             if (data.cod === 200) {
-                document.getElementById('currCity').innerHTML = data.name;
-                document.getElementById('currK').innerHTML = Math.floor(data.main.temp) + ' K';
-                document.getElementById('currC').innerHTML = Math.floor(data.main.temp-273.15) + ' C';
-                document.getElementById('currF').innerHTML = Math.floor(((data.main.temp-273.15) * (9 / 5) + 32)) + ' F';
-                document.getElementById('currCond').innerHTML = data.weather[0].main;
+                document.getElementById('currCity').innerHTML   = data.name;
+                document.getElementById('currK').innerHTML      = Math.floor(data.main.temp) + ' K';
+                document.getElementById('currC').innerHTML      = Math.floor(data.main.temp-273.15) + ' C';
+                document.getElementById('currF').innerHTML      = Math.floor(((data.main.temp-273.15) * (9 / 5) + 32)) + ' F';
+                document.getElementById('currCond').innerHTML   = data.weather[0].main;
+                document.getElementById('humid').innerHTML      = data.main.humidity + " %"
+                document.getElementById('pressure').innerHTML   = data.main.pressure + " mbar"
+                document.getElementById('windSpeed').innerHTML  = data.wind.speed + ' MPH' 
                 document.getElementById('currCondPic').setAttribute('src', 'http://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png');
-                document.getElementById('humid').innerHTML = data.main.humidity + " %"
-                document.getElementById('pressure').innerHTML = data.main.pressure + " mbar"
-                document.getElementById('windSpeed').innerHTML = data.wind.speed + ' MPH' 
+                document.getElementById('currCondPic').style.display = 'block'
             } else {
-                document.getElementById("alert").style.display = 'block'
-                document.getElementById("alertMes").innerHTML = data.message
+                document.getElementById("alert").style.display  = 'block'
+                document.getElementById("alertMes").innerHTML   = data.message
 
             }
         }
